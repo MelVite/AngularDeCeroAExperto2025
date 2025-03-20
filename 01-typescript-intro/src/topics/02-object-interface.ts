@@ -15,4 +15,9 @@ const strider: Character = {
     hp: 100,
     skills: ['Bash', 'Counter'],
 }
+
+strider.hometown = 'Rivendell'
+
+console.table(strider);
+
 export {};
