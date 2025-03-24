@@ -5,7 +5,7 @@ function addNumbers(a: number, b: number) {
 
 const result: string = addNumbers(1, 2).toString();
 
-console.log({ result }); //Para imprimir como un objeto
+// console.log({ result }); //Para imprimir como un objeto
 
 
 //Funciones FLECHA
@@ -20,7 +20,7 @@ const addNumbersArrowString = (a: number, b: number): string => {
 
 const resultArrow: string = addNumbersArrowString(2, 5);
 
-console.log({ resultArrow });
+// console.log({ resultArrow });
 
 function multiply( firstNumber: number, secondNumber?: number, base: number = 2 ) {
     return firstNumber * base;
@@ -28,4 +28,34 @@ function multiply( firstNumber: number, secondNumber?: number, base: number = 2 
 
 const multiplyResult: number = multiply(5); //Imprime 10
 
-console.log({ multiplyResult });
+// console.log({ multiplyResult });
+
+
+//-------------------------------------------------
+interface Character {
+    name: string;
+    hp: number;
+    showHp: () => void //Para las funciones en interfaces se definen como funciones flecha y el tipo que van a regresar 
+}
+//FUNCIONES CON OBJETOS COMO ARGUMENTOS
+const healCharacter = ( character: Character, amount: number) => {
+
+    character.hp += amount;
+    //hp son puntos de vida     
+}
+
+const strider: Character = {
+    name: 'Aragon',
+    hp: 50,
+    showHp() {
+        console.log(`Puntos de vida ${ this.hp }`);
+    }
+}
+
+healCharacter ( strider, 10 );
+healCharacter ( strider, 30 );
+
+strider.showHp();
+
+
+export {};
