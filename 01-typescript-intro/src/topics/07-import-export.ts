@@ -25,4 +25,8 @@ const [ total, iva ] = ivaCalculation({
 console.log('Exp Total:', total);
 console.log('Exp Iva:', iva);
 
+/** Al importar un archivo se importa TODO, por ello vemos los console.log del archivo 6
+ * A menos que sea estrictamente necesario solo debemos tener las funciones o elementos que se buscan exportar.
+ */
+
 
